@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false"
+    android:fillAfter="true">
+
+    <translate
+        android:interpolator="@android:anim/bounce_interpolator"
+        android:fromXDelta="0%"
+        android:toXDelta="0%"
+        android:fromYDelta="0%"
+        android:toYDelta="100%"
+        android:duration="1800"/>
+
+    <set>
+        <translate
+            android:interpolator="@android:anim/linear_interpolator"
+            android:fromXDelta="0%"
+            android:toXDelta="14%"
+            android:fromYDelta="0%"
+            android:toYDelta="0%"
+            android:startOffset="500"
+            android:duration="1000">
+        </translate>
+    </set>
+
+    <set>
+        <scale
+            android:fromXScale="30%"
+            android:toXScale="80%"
+            android:fromYScale="30%"
+            android:toYScale="80%"
+            android:interpolator="@android:anim/linear_interpolator"
+            android:duration="800">
+        </scale>
+    </set>
+
+</set>

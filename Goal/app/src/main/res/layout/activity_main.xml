@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jklae.goal.MainActivity"
+    >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#8C9F33"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bucket List"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:typeface="monospace"
+            android:textSize="24sp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignTop="@+id/sort_menu"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp" />
+        <ImageButton
+            android:id="@+id/more_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_vert_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="optionMenuOnclick"/>
+        <ImageButton
+            android:id="@+id/sort_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sort_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_toLeftOf="@id/more_menu"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:onClick="sortMenuOnclick"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="목표를 생성해주세요 !"
+        android:layout_below="@+id/notice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/notice"
+        android:textFilterEnabled="true">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/notice"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:background="#FAF4C0"
+        android:layout_below="@+id/title_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/fold_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:src="@drawable/ic_keyboard_arrow_up_black_24dp"
+        android:onClick="foldNoticeOnclick"
+        android:layout_marginRight="6dp"
+        android:layout_below="@+id/title_bar"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:id="@+id/unfold_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:src="@drawable/ic_assignment_black_24dp"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginRight="6dp"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:onClick="unfoldNoticeOnclick"/>
+
+    <ImageButton
+        android:id="@+id/insert_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_add_circle_black_24dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

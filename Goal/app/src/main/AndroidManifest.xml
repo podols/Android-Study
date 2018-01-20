@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jklae.goal">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/apk_img"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/apk_img"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".CreateGoal1Activity" />
+        <activity android:name=".CreateGoal2Activity" />
+        <activity android:name=".CreateGoal3Activity" />
+        <activity android:name=".CheckCreationGoalActivity" />
+        <activity android:name=".GoalDetailActivity" />
+        <activity android:name=".UpdateGoalActivity" />
+
+    </application>
+
+</manifest>
